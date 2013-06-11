@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+/*
+Theme Name:cosmo
+Theme URI:
+Description:Bootswatchのcosmoに対応させた
+Author:sonobe
+Version: 1.0.0
+*/
+
+div.partsHeading h3 {
+  color: #080808;
+  border-bottom: 1px solid #ccc;
+}
+
+/*well*/
+.memberImageBox,
+#MailAddressLogin,
+div.dparts div.parts {
+  background-color: #eee;
+  border-color: #dcdcdc;
+  border-color: rgba(0,0,0,0.1);
+  -webkit-border-radius: 0px;  
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.timeline-post a.screen-name,
+.nav > li > a {
+  color: #080808;
+}
+
+h1.brand > a {
+  color: white;
+}
+
+div#Header div#HeaderContainer div.container div#notificationCenter {
+  background-image: url(../img/NOTIFY_CENTER_2.png);
+}
+
+div.container div#notificationCenter div#notificationCenterDetail,
+#informationAboutThisIsYourProfilePage.descriptionBox .parts,
+.flashError {
+  background-color: #ff7518;
+  border: none;
+  color: white;
+}
+
+div#Body div#Container div#Contents div#ContentsContainer div#LayoutA div#Top div#information_1 {
+  color: #fff;
+  background-color: #3fb618;
+  border-color: transparent;
+}
+
+.alertBox {
+	background-color: #ff0039;
+	color: white;
+}
+
+/*テーブル角丸*/
+div.parts table {
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+}
+

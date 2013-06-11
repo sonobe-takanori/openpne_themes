@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+/*
+Theme Name:cosmo-pink
+Theme URI:
+Description:Bootswatchのcosmo(ver.2.3.1)に対応させた(pink)
+Author:Sonobe Takanori
+Version: 1.0.0
+*/
+
+/*
+===================共通設定====================
+*/
+h1.brand > a {
+  line-height:15px;
+}
+h1.brand > a:hover {
+  text-decoration:none;
+}
+div#localNav {
+  display:none;
+}
+select {
+  width: 250px;
+}
+.memberImageBox {
+  padding:20px 0 20px 0;
+}
+div#Contents,div#ContentsContainer {
+  padding-top:0px;
+  margin:0 auto;
+  width:1070px;
+}
+div#LayoutA, div#LayoutB, div#LayoutC {
+  padding-top:0px;
+  width:810px;
+  float:left;
+}
+#sideBanner {
+  margin-left:10px;
+  float:left;
+  width:250px;
+}
+#sideBanner > .partsHeading {
+  width:250px;
+}
+.partsHeading > h3 {
+  line-height:25px;
+}
+#Header {
+  height:45px;
+  margin-bottom:15px;
+}
+
+/*
+===================テーマ別設定==================
+*/
+
+/*背景色*/
+#Container {
+  background: #fff;
+}
+
+/*ヘッダーとフッター*/
+#container,#Footer{
+  color:#fff;
+  background-color: #080808;
+}
+
+
+/*見出し*/
+div.partsHeading {
+  background-color:#007FFF;
+}
+div.partsHeading h3 {
+  color:#fff;
+}
+
+/*ロゴの文字色*/
+h1.brand > a {
+  color: #fff;
+  text-shadow: 0 1px 0 #080808;
+}
+
+/*お知らせ*/
+.informationBox,.descriptionBox .parts {
+  color: #080808;
+  background-color:#eee;
+  border-color: transparent;
+}
+div.informationBox > .sortHandle {
+  border-left:29px solid #FF0039;
+  border-left-color: #FF0039;
+  text-indent:5px;
+}
+
+
+/*イメージボックス*/
+.memberImageBox, .memberImageBox p.photo {
+  background-color: #080808;
+  border:none;
+}
+.memberImageBox p.text {
+  color:#fff;
+}
+
+/*テーブル関係*/
+table*,tr*,td*,th*,div.parts table {
+  border: 1px solid #ddd;
+  border-radius:0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+}
+
+/*通知欄*/
+#notificationCenterDetail {
+  background: #FFFFFF;
+  border: 2px solid #ff7518;
+}
+
+#notificationCenterDetailHeader {
+  background: #ff7518;
+  border-bottom: 1px solid #E6E6E6;
+  color:#fff;
+}
+#notificationCenterError {
+  background: #FFFFFF;
+  color: #FF0039;
+}
+
+
+/*
+========================================
+      anti-border-radius
+========================================
+*/
+.informationBox, div.partsHeading, .memberImageBox {
+-webkit-border-radius: 0px;
+-moz-border-radius: 0px;
+border-radius: 0px;
+border:none;
+}

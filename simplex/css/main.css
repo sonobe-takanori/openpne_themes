@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+/*
+Theme Name:simplex
+Theme URI:
+Description:Bootswatchのsimplexに対応させた
+Author:sonobe
+Version: 1.0.0
+*/
+
+div.partsHeading h3 {
+  color: #333;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/*well*/
+.memberImageBox,
+#MailAddressLogin,
+div.dparts div.parts {
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  border: 1px solid rgba(0,0,0,0.1);
+  -webkit-border-radius: 4px;  
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.timeline-post a.screen-name,
+.nav > li > a {
+  color: #555;
+}
+
+h1.brand > a {
+  color: #555;
+}
+
+div#Header div#HeaderContainer div.container div#notificationCenter {
+  background-image: url(../img/NOTIFY_CENTER_1.png);
+}
+
+div.container div#notificationCenter div#notificationCenterDetail,
+#informationAboutThisIsYourProfilePage.descriptionBox .parts,
+.flashError {
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  color: #d9831f;
+}
+
+div#Body div#Container div#Contents div#ContentsContainer div#LayoutA div#Top div#information_1 {
+  color: #029acf;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+
+div.alertBox {
+	background-color: #f2dede;
+	color: #d9230f;
+	border-color:#eed3d7;
+}
+
+/*テーブル角丸*/
+div.parts table {
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+
