@@ -25,6 +25,27 @@ ul, ol {
   list-style-type: none;
 }
 
+#diaryForm table li,
+#configNotificationMailBox table li {
+	position:relative;
+	float:left;
+}
+
+#diaryForm table input[type="radio"],
+#configNotificationMailBox table input[type="radio"] {
+	float:left;
+	margin-left:5px;
+}
+#diaryForm table input[type="radio"]:first-child,
+#configNotificationMailBox table input[type="radio"]:first-child {
+	margin-left:0px;
+}
+
+#configNotificationMailBox th {
+	width:300px;
+}
+
+
 table {
   border-collapse: separate;
   border-spacing: 0;
@@ -114,32 +135,24 @@ body {
 input,
 textarea,
 select {
-  color: #333333;
   font-size: inherit;
 }
 
 input[type='text'], input[type='password'], .input_text {
-  display: inline-block;
-  padding: 1px;
-  font-size: 13px;
-  color: #555;
-  border: 1px solid #CCC;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
+	margin:0;
 }
 
 
 .input_text,
 .input_password,
 textarea {
-  background-color: #f8f8f8;
 }
 
 .input_text,
 .input_password,
 textarea,
 select {
+	margin:0;
 }
 
 .input_image {
@@ -177,8 +190,16 @@ div.parts th,
 div.parts td {
   border-width: 0;
   border-style: solid;
-  border-color: #CCCCCC;
+  border-color: #e5e5e5;
 }
+
+div.parts table td,div.parts table th {
+	border-top: 1px solid #e5e5e5;
+}
+div.parts table tr:first-child td,div.parts table tr:first-child th {
+	border-top:transparent;
+} 
+
 
 div.parts .form table {
   max-width: 100%;
@@ -193,7 +214,8 @@ div.parts .form table {
   line-height: 18px;
   text-align: left;
   vertical-align: top; 
-  border-top: 1px solid #ddd;
+/*  border-top: 1px solid #ddd;
+*/
 }
 .form table th { 
   font-weight: bold;
@@ -211,8 +233,8 @@ div.parts .form table {
   padding: 4px 5px;
 }
 .form table {
-  border: 1px solid #ddd;
-  border-collapse: separate;
+/*  border: 1px solid #ddd;
+*/  border-collapse: separate;
   *border-collapse: collapsed;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
@@ -223,20 +245,19 @@ div.parts .form table {
 .form table td + td,
 .form table th + td,
 .form table td + th {
-  border-left: 1px solid #ddd;
+/*  border-left: 1px solid #ddd;
+*/
 }
 .form table thead:first-child tr:first-child th, .form table tbody:first-child tr:first-child th, .form table tbody:first-child tr:first-child td {
   border-top: 0;
-}
-.form table tbody tr:nth-child(odd) td, .form table tbody tr:nth-child(odd) th {
-  background-color: #f9f9f9;
 }
 
 /*----------------------------------------------
  * List Marker
  *--------------------------------------------*/
 ul.moreInfo li {
-  padding: 2px 0 2px 20px;
+  padding: 2px 0 2px 0px;
+  text-align:right;
 }
 
 ul.moreInfo.button li {
@@ -903,20 +924,6 @@ div.operation ul.moreInfo li {
 /*----------------------------------------------
  * Page Navigation
  *--------------------------------------------*/
-#Left .pageNav {
-  min-height: 20px;
-  padding: 0px;
-  margin-bottom: 10px;
-  background-color: #f5f5f5;
-  border: 1px solid #eee;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  -webkit-border-radius: 4px; 
-  -moz-border-radius: 4px; 
-  border-radius: 4px; 
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-}
 
 #Left .pageNav ul {
   margin-bottom: 0;
@@ -983,8 +990,15 @@ div.operation ul.moreInfo li {
 }
 
 .informationBox .caution {
-  color:inherit;
   margin-top:10px;
+  color: inherit;
+}
+.informationBox .caution a {
+  color: inherit;
+  text-decoration: underline;	
+}
+.informationBox .caution a:hover {
+	font-weight:bold;
 }
 
 div#Top div#information_1 {
@@ -1042,7 +1056,6 @@ div#Top div#information_1,
 .form th,
 .form td {
   padding: 5px;
-  background-color: #FFFFFF;
 }
 
 .form th {
@@ -1130,9 +1143,13 @@ div#Top div#information_1,
 #profileForm .parts {
 	background:transparent;
 	border:none;
+	-webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 #page_member_editProfile table {
-	border-width:1px;
+	border-width:0px;
+	margin-top:15px;
 }
 /*==============================================================================
  * YesNo
@@ -1170,10 +1187,11 @@ div#Top div#information_1,
 }
 
 .memberImageBox ul.moreInfo {
-  margin: 2px 0 -5px;
+  margin: 5px 0px 0px;
 }
 
 .memberImageBox ul.moreInfo li {
+	text-align:center;
   padding: 1px 0;
   background: none;
 }
@@ -1192,6 +1210,8 @@ div#Top div#information_1,
 
 .memberImageBox p.text {
   margin-top: 4px;
+  padding-top:5px;
+  font-size:18px;
 }
 
 .memberImageBox p.loginTime {
@@ -1256,17 +1276,27 @@ div#Top div#information_1,
  * nineTable
  *----------------------------------------------------------------------------*/
 .nineTable tr.photo td {
-  height: 80px;
-  padding: 2px 0;
+  height: 88px;
+  padding-top: 12px;
   text-align: center;
+}
+
+.nineTable tr.photo:first-child td {
+  padding-top: 0px;
 }
 
 .nineTable tr.photo td p.crown {
   text-align: center;
+  margin-top:-12px;
+}
+
+.nineTable td {
+	overflow: visible;
 }
 
 .nineTable tr.text td {
-  padding: 2px;
+  border-top-color:transparent;
+  padding-bottom: 5px;
   text-align: center;
 }
 
@@ -1448,6 +1478,7 @@ div#Top div#information_1,
 .photoTable tr.text td {
   padding: 5px 2px;
   text-align: center;
+  border-top-color: transparent;
 }
 
 /*==============================================================================
@@ -1838,7 +1869,8 @@ span.op_color {
 
 .memberImageBox,
 #MailAddressLogin,
-div.dparts div.parts {
+div.dparts div.parts,
+#profileForm {
   min-height: 20px;
   padding: 10px;
   margin-bottom: 20px;
@@ -1859,7 +1891,7 @@ form select#language_culture {
   margin-top:-4px;
 }
 
-h1.brand {
+a.brand {
   line-height:1em;
   margin:0;
 }
@@ -1870,14 +1902,6 @@ div#Body div#Container div#Header div#HeaderContainer div.container div#notifica
 div#Body div#Container div#Header div#HeaderContainer div.container div#notificationCenter div#notificationCenterDetail div#notificationCenterError {
   color: inherit;
 }
-
-div#homeAllTimeline_21 div.parts div.timeline div.timeline-postform {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  border:0;
-}
-
 #page_member_login div#LayoutA {
 	width:980px;
 }
@@ -1905,3 +1929,22 @@ div#homeAllTimeline_21 div.parts div.timeline div.timeline-postform {
 .alertBox div.parts table {
 	border:none !important;
 }
+.navbar-inner {
+	border-radius:0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+
+.navbar .brand {
+  line-height:1em;
+}
+
+#profile_op_preset_birthday_value_year,
+#profile_op_preset_birthday_value_month,
+#profile_op_preset_birthday_value_day,
+#member_profile_op_preset_birthday_year,
+#member_profile_op_preset_birthday_month,
+#member_profile_op_preset_birthday_day {
+	width:120px;
+}
+

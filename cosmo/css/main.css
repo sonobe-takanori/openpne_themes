@@ -16,10 +16,10 @@ div.partsHeading h3 {
 /*well*/
 .memberImageBox,
 #MailAddressLogin,
-div.dparts div.parts {
+div.dparts div.parts,
+#profileForm {
   background-color: #eee;
-  border-color: #dcdcdc;
-  border-color: rgba(0,0,0,0.1);
+  border-color: transparent;
   -webkit-border-radius: 0px;  
   -moz-border-radius: 0px;
   border-radius: 0px;

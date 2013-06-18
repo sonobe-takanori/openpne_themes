@@ -16,7 +16,8 @@ div.partsHeading h3 {
 /*well*/
 .memberImageBox,
 #MailAddressLogin,
-div.dparts div.parts {
+div.dparts div.parts,
+#profileForm {
   background-color: #ffffff;
   border: 1px solid #e6e6e6;
   border: 1px solid rgba(0,0,0,0.1);
