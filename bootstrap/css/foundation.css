@@ -168,7 +168,6 @@ select {
 }
 
 strong {
-  font-weight: bold;
 }
 
 .sortable {
@@ -993,11 +992,16 @@ div.operation ul.moreInfo li {
   margin-top:10px;
   color: inherit;
 }
-.informationBox .caution a {
+.informationBox a,
+.informationBox .caution a,
+.informationBox a strong {
   color: inherit;
-  text-decoration: underline;	
+  text-decoration: underline;
+  font-weight:normal;
 }
-.informationBox .caution a:hover {
+.informationBox a:hover,
+.informationBox .caution a:hover,
+.informationBox a:hover strong {
 	font-weight:bold;
 }
 
