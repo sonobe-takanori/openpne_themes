@@ -1,8 +1,12 @@
 @charset "UTF-8";
 
-html,body {
-	height:100%;
-}
+/*
+Theme Name:United
+Theme URI:https://github.com/suzuki-mar/opSkinThemePlugin
+Description:BootswatchのUnitedに対応させた
+Author:Suzuki Masayuki
+Version: 1.0.0
+*/
 
 /*==============================================================================
  * Reset Default Style
@@ -17,37 +21,10 @@ iframe, object, embed {
   text-align: left;
 }
 
-body {
-	font-size: 14px;
-	line-height: 20px;
-	font-family: "Helvetica Neue", Helvetica, Arial, Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-}
-
 ul, ol {
   list-style-position: outside;
   list-style-type: none;
 }
-
-#diaryForm table li,
-#configNotificationMailBox table li {
-	position:relative;
-	float:left;
-}
-
-#diaryForm table input[type="radio"],
-#configNotificationMailBox table input[type="radio"] {
-	float:left;
-	margin-left:5px;
-}
-#diaryForm table input[type="radio"]:first-child,
-#configNotificationMailBox table input[type="radio"]:first-child {
-	margin-left:0px;
-}
-
-#configNotificationMailBox th {
-	width:300px;
-}
-
 
 table {
   border-collapse: separate;
@@ -133,29 +110,54 @@ form p {
 body {
   line-height: 1.2;
   font-style: normal;
+  font-size: 10pt;
+  background: #F1F1F1;
 }
 
 input,
 textarea,
 select {
+  color: #333333;
   font-size: inherit;
 }
 
+a:link {
+  color: #33B5E5;
+}
+
+a:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+a:hover, a:active {
+  color: #005580;
+}
+
 input[type='text'], input[type='password'], .input_text {
-	margin:0;
+  display: inline-block;
+  padding: 1px;
+  font-size: 13px;
+  color: #555;
+  border: 1px solid #CCC;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 
 
 .input_text,
 .input_password,
 textarea {
+  background-color: #f8f8f8;
 }
 
 .input_text,
 .input_password,
 textarea,
 select {
-	margin:0;
+  border: 1px solid #888888;
 }
 
 .input_image {
@@ -163,6 +165,8 @@ select {
 }
 
 .input_submit {
+  border: 1px solid #888888;
+  background: #dadce6 url(../images/bg_button.gif) repeat-x scroll 50% 0;
   letter-spacing: 0;
 }
 
@@ -171,6 +175,7 @@ select {
 }
 
 strong {
+  font-weight: bold;
 }
 
 .sortable {
@@ -183,25 +188,17 @@ strong {
 div.parts table {
   table-layout: fixed;
   width: 100%;
-  border-width:0px;
+  border-width: 0 1px 1px 0;
   border-style: solid;
   border-color: #CCCCCC;
 }
 
 div.parts th,
 div.parts td {
-  border-width: 0;
+  border-width: 1px 0 0 1px;
   border-style: solid;
-  border-color: #e5e5e5;
+  border-color: #CCCCCC;
 }
-
-div.parts table td,div.parts table th {
-	border-top: 1px solid #e5e5e5;
-}
-div.parts table tr:first-child td,div.parts table tr:first-child th {
-	border-top:transparent;
-} 
-
 
 div.parts .form table {
   max-width: 100%;
@@ -216,8 +213,7 @@ div.parts .form table {
   line-height: 18px;
   text-align: left;
   vertical-align: top; 
-/*  border-top: 1px solid #ddd;
-*/
+  border-top: 1px solid #ddd;
 }
 .form table th { 
   font-weight: bold;
@@ -235,31 +231,53 @@ div.parts .form table {
   padding: 4px 5px;
 }
 .form table {
-/*  border: 1px solid #ddd;
-*/  border-collapse: separate;
+  border: 1px solid #ddd;
+  border-collapse: separate;
   *border-collapse: collapsed;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  border-radius: 0px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 
 .form table th + th,
 .form table td + td,
 .form table th + td,
 .form table td + th {
-/*  border-left: 1px solid #ddd;
-*/
+  border-left: 1px solid #ddd;
 }
 .form table thead:first-child tr:first-child th, .form table tbody:first-child tr:first-child th, .form table tbody:first-child tr:first-child td {
   border-top: 0;
+}
+.form table thead:first-child tr:first-child th:first-child, .form table tbody:first-child tr:first-child td:first-child {
+  -webkit-border-radius: 4px 0 0 0;
+  -moz-border-radius: 4px 0 0 0;
+  border-radius: 4px 0 0 0;
+}
+.form table thead:first-child tr:first-child th:last-child, .form table tbody:first-child tr:first-child td:last-child {
+  -webkit-border-radius: 0 4px 0 0;
+  -moz-border-radius: 0 4px 0 0;
+  border-radius: 0 4px 0 0;
+}
+.form table thead:last-child tr:last-child th:first-child, .form table tbody:last-child tr:last-child td:first-child {
+  -webkit-border-radius: 0 0 0 4px;
+  -moz-border-radius: 0 0 0 4px;
+  border-radius: 0 0 0 4px;
+}
+.form table thead:last-child tr:last-child th:last-child, .form table tbody:last-child tr:last-child td:last-child {
+  -webkit-border-radius: 0 0 4px 0;
+  -moz-border-radius: 0 0 4px 0;
+  border-radius: 0 0 4px 0;
+}
+.form table tbody tr:nth-child(odd) td, .form table tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
 }
 
 /*----------------------------------------------
  * List Marker
  *--------------------------------------------*/
 ul.moreInfo li {
-  padding: 2px 0 2px 0px;
-  text-align:right;
+  padding: 2px 0 2px 20px;
+  background: url(../images/icon_arrow_1.gif) no-repeat 0 0.4em;
 }
 
 ul.moreInfo.button li {
@@ -285,8 +303,7 @@ div#LayoutC {
   zoom: 1;
   overflow: visible;
   overflow: -moz-scrollbars-none;
-  padding-top: 0;
-  background:transparent;
+  padding-top: 10px;
 }
 
 #Left,
@@ -319,10 +336,13 @@ pre {
  *--------------------------------------------*/
 #Container {
   min-width: 975px;
+  background: #FFFFFF;
 }
 
 #Contents {
+background: #FFFFFF;
 }
+
 
 #ContentsContainer,
 #FooterContainer {
@@ -331,17 +351,14 @@ pre {
 }
 
 #ContentsContainer {
-  position:relative;
-  margin:0 auto;
-  width:1080px;
-  
+  background: #FFFFFF;
 }
 
 #LayoutA,
 #LayoutB,
 #LayoutC {
   float: left;
-  width: 820px;
+  width: 810px;
 }
 
 #LayoutA #Left {
@@ -390,23 +407,18 @@ pre {
 
 #sideBanner {
   float: right;
-  width: 240px;
+  width: 160px;
   padding-top: 10px;
-}
-
-div#sideBanner form {
-  margin-bottom: 38px;
 }
 
 #Footer {
   clear: both;
-  border-top: 1px solid #ccc;
-  padding-top: 10px;
 }
 
 /*----------------------------------------------
  * Header
  *--------------------------------------------*/
+
 
 /*----------------------------------------------
  * Notification Center
@@ -417,26 +429,25 @@ div#sideBanner form {
   padding: 4px 14px 4px 14px;
   float: left;
   position: relative;
-  background-repeat: no-repeat;
-  background-position: 14px 4px;
 }
 
 #notificationCenterDetail {
   width: 320px; 
   background: #FFFFFF;
-  border: 2px solid;
+  border: 2px solid #97310E;
   position: absolute;
   left: 15px;
   top: 40px;
   overflow: visible;
   z-index: 100;
   display: none;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
 }
 
 #notificationCenterDetailHeader {
   width: 306px;
   padding: 7px;
+  background: #97310E;
+  border-bottom: 1px solid #E6E6E6;
   text-align: left;
   display: inline-block;
   font-size: 14px;
@@ -446,6 +457,7 @@ div#sideBanner form {
 #notificationCenterLoading {
   width: 320px;
   padding: 21px 0;
+  background: #FFFFFF;
   text-align: center;
   border-top: 0px; 
   display: inline-block;  
@@ -454,6 +466,7 @@ div#sideBanner form {
 #notificationCenterError {
   width: 320px;
   padding: 20px 0;
+  background: #FFFFFF;
   color: #000000;
   text-align: center;
   display: inline-block;
@@ -465,18 +478,19 @@ div#sideBanner form {
 }
 
 #notificationCenterDetail .push {
-  border-bottom: 1px solid inherit;
+  border-bottom: 1px solid #E6E6E6;
   padding: 4px 0;
   display: inline-block;
-  background: inherit;
+  background: #ddd;
 }
 
 #notificationCenterDetail .push:hover {
   cursor: pointer;
+  background-color: #cfe7ea;
 }
 
 #notificationCenterDetail .isread {
-  background: inherit;
+  background: #FFFFFF;
 }
 
 #notificationCenterDetail .push_icon {
@@ -726,12 +740,20 @@ div#sideBanner form {
  * Contents
  *--------------------------------------------*/
 #Contents {
+  background: #FFFFFF;
 }
 
 /*----------------------------------------------
  * Footer
  *--------------------------------------------*/
 #Footer {
+  height: 50px;
+  padding: 5px;
+  background-color: #333;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  color: #FFFFFF;
 }
 
 #Footer a {
@@ -749,21 +771,11 @@ div#sideBanner form {
  *--------------------------------------------*/
 div.parts,
 div.dparts {
-  margin: 0 auto 20px;
+  margin: 0 auto 10px;
 }
 
 div.dparts div.parts {
   margin: 0;
-}
-
-.parts {
-	min-height: 20px;
-  padding: 10px;
-  margin-bottom: 20px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  border: 1px solid black;
 }
 
 div.ditem {
@@ -774,6 +786,19 @@ div.ditem {
  * Parts Heading
  *--------------------------------------------*/
 div.partsHeading {
+  margin-bottom: 10px;
+  padding: 7px 14px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #dd4814;
+  border: 1px solid #dd4814;
+  -webkit-border-radius: 3px; 
+  -moz-border-radius: 3px; 
+  border-radius: 3px; 
+  font-size: 100%;
+  text-align: left;
+  color: #FFFFFF;
 }
 
 div.partsHeading a {
@@ -797,14 +822,6 @@ div.partsHeading a {
 div.partsHeading h3 {
   display: inline;
   font-weight: bold;
-	display: block;
-	width: 100%;
-	padding: 0;
-	margin-bottom: 20px;
-	border: 0;
-	border-bottom: 1px solid #e5e5e5;
-	font-size:17px;
-  line-height: 30px;
 }
 
 div.partsHeading p {
@@ -935,6 +952,20 @@ div.operation ul.moreInfo li {
 /*----------------------------------------------
  * Page Navigation
  *--------------------------------------------*/
+#Left .pageNav {
+  min-height: 20px;
+  padding: 0px;
+  margin-bottom: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #eee;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  -webkit-border-radius: 4px; 
+  -moz-border-radius: 4px; 
+  border-radius: 4px; 
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
 
 #Left .pageNav ul {
   margin-bottom: 0;
@@ -984,6 +1015,7 @@ div.operation ul.moreInfo li {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
+  background-color: #E0D9CB;
 }
 
 .informationBox div.body {
@@ -1001,53 +1033,27 @@ div.operation ul.moreInfo li {
 }
 
 .informationBox .caution {
-  margin-top:10px;
-  color: inherit;
-}
-.informationBox a,
-.informationBox .caution a,
-.informationBox a strong {
-  color: inherit;
-  text-decoration: underline;
-  font-weight:normal;
-}
-.informationBox a:hover,
-.informationBox .caution a:hover,
-.informationBox a:hover strong {
-	font-weight:bold;
+  color: #FF0000;
 }
 
-div#Top div#information_1 {
-  border: 1px solid black;	
-}
-
-div#Top div#information_1,
-#notificationCenterDetail {
-	padding: 8px 35px 8px 14px;
-	margin-bottom: 20px;
-	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	border-radius: 0;
-}
 /*==============================================================================
  * alertBox
  *----------------------------------------------------------------------------*/
 .alertBox {
-  width: auto;
+  width: 564px;
 }
-.alertBox.dparts > div.parts {
-	background-color: inherit;
-	color: inherit;
-}
+
 #Body .alertBox th {
   padding: 8px 0;
   width: 148px;
+  background-color: #FFFFFF;
   text-align: center;
 }
 
 #Body .alertBox td {
   padding: 6px;
+  background-color: #FFFFFF;
+  color: #ff0000;
 }
 
 /*==============================================================================
@@ -1072,6 +1078,7 @@ div#Top div#information_1,
 .form th,
 .form td {
   padding: 5px;
+  background-color: #FFFFFF;
 }
 
 .form th {
@@ -1145,9 +1152,9 @@ div#Top div#information_1,
 /*==============================================================================
  * listBox
  *----------------------------------------------------------------------------*/
-.listBox th,
-.listBox td{
+.listBox th {
   width: 83px;
+  background-color: #FFFFFF;
 }
 #profile th {
   width: 89px;
@@ -1156,17 +1163,6 @@ div#Top div#information_1,
   padding: 5px;
 }
 
-#profileForm .parts {
-	background:transparent;
-	border:none;
-	-webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-#page_member_editProfile table {
-	border-width:0px;
-	margin-top:15px;
-}
 /*==============================================================================
  * YesNo
  *----------------------------------------------------------------------------*/
@@ -1185,17 +1181,21 @@ div#Top div#information_1,
 .memberImageBox {
   margin-bottom: 10px;
   padding: 7px;
+  background-color: #EFEFEF;
   border: 1px solid #eee;
   border: 1px solid rgba(0, 0, 0, 0.05);
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
-/*  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
-*/}
+}
 
 .memberImageBox p.photo {
+  padding: 7px;
+  border: 1px solid #CCCCCC;
+  background-color: #FEFEFE;
 }
 
 .memberImageBox p.friendLink {
@@ -1203,11 +1203,10 @@ div#Top div#information_1,
 }
 
 .memberImageBox ul.moreInfo {
-  margin: 5px 0px 0px;
+  margin: 2px 0 -5px;
 }
 
 .memberImageBox ul.moreInfo li {
-	text-align:center;
   padding: 1px 0;
   background: none;
 }
@@ -1226,8 +1225,6 @@ div#Top div#information_1,
 
 .memberImageBox p.text {
   margin-top: 4px;
-  padding-top:5px;
-  font-size:18px;
 }
 
 .memberImageBox p.loginTime {
@@ -1264,6 +1261,7 @@ div#Top div#information_1,
 
 .memberImagesBox li {
   padding-left: 12px;
+  background: url(./skin/default/img/marker.gif) no-repeat 3px 3px;
 }
 
 /*==============================================================================
@@ -1292,27 +1290,17 @@ div#Top div#information_1,
  * nineTable
  *----------------------------------------------------------------------------*/
 .nineTable tr.photo td {
-  height: 88px;
-  padding-top: 12px;
+  height: 80px;
+  padding: 2px 0;
   text-align: center;
-}
-
-.nineTable tr.photo:first-child td {
-  padding-top: 0px;
 }
 
 .nineTable tr.photo td p.crown {
   text-align: center;
-  margin-top:-12px;
-}
-
-.nineTable td {
-	overflow: visible;
 }
 
 .nineTable tr.text td {
-  border-top-color:transparent;
-  padding-bottom: 5px;
+  padding: 2px;
   text-align: center;
 }
 
@@ -1406,6 +1394,7 @@ div#Top div#information_1,
 .searchFormLine ul li label {
   margin-right: 2px;
   padding: 1px 13px 0 0;
+  background: url(../images/icon_arrow_2.gif) no-repeat 100% 0;
 }
 
 /*==============================================================================
@@ -1466,11 +1455,13 @@ div#Top div#information_1,
 .homeRecentList ul.articleList li {
   padding-bottom: 5px;
   padding-left: 85px;
+  background: url(../images/icon_1.gif) 3px 0.4em no-repeat scroll;
   text-indent: -72px;
 }
 
 .homeRecentList span.date {
   padding-right: 18px;
+  background: url(../images/articleList_marker.gif) 92% 0.3em no-repeat scroll;
 }
 
 .homeRecentList div.moreInfo ul.moreInfo {
@@ -1494,7 +1485,6 @@ div#Top div#information_1,
 .photoTable tr.text td {
   padding: 5px 2px;
   text-align: center;
-  border-top-color: transparent;
 }
 
 /*==============================================================================
@@ -1698,6 +1688,7 @@ div.activityBox div.box_form div.box_body span.submit input.submit {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid #888888;
+  background: url(../images/bg_button_a.gif);
   font-weight: bold;
   font-size: 14px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1880,87 +1871,3 @@ span.op_color {
 #oldGlobalNav {
   display: none;
 }
-
-
-
-.memberImageBox,
-#MailAddressLogin,
-div.dparts div.parts,
-#profileForm {
-  min-height: 20px;
-  padding: 10px;
-  margin-bottom: 20px;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-  border: 1px solid black;
-}
-
-form label {
-  float:left;
-	font-size: 15px;
-}
-
-form select#language_culture {
-  width:140px;
-  float:right;
-  margin-top:-4px;
-}
-
-a.brand {
-  line-height:1em;
-  margin:0;
-}
-
-div#notificationCenter div#notificationCenterDetail div#notificationCenterDetailHeader,
-div#notificationCenter div#notificationCenterDetail div#notificationCenterLoading,
-div#notificationCenter div#notificationCenterDetail div#notificationCenterLoading,
-div#notificationCenter div#notificationCenterDetail div#notificationCenterError {
-  color: inherit;
-}
-#page_member_login div#LayoutA {
-	width:980px;
-}
-
-#page_member_login #MailAddressLogin.loginForm {
-	margin: 140px;
-  padding: 60px;
-}
-#page_member_login #sideBanner {
-	display:none;
-}
-#page_member_login.insecure_page div#LayoutA div#Center {
-	float: left;
-  width: 30%;
-  margin-left: 40%;
-  margin-top: 10%;
-}
-#page_member_profile .alertBox.dparts table,
-#page_member_profile .alertBox.dparts th,
-#page_member_profile .alertBox. td, {
-	border:none;
-	background:transparent;
-	color:inherit;
-}
-.alertBox div.parts table {
-	border:none !important;
-}
-.navbar-inner {
-	border-radius:0;
-	-moz-border-radius: 0;
-	-webkit-border-radius: 0;
-}
-
-.navbar .brand {
-  line-height:1em;
-}
-
-#profile_op_preset_birthday_value_year,
-#profile_op_preset_birthday_value_month,
-#profile_op_preset_birthday_value_day,
-#member_profile_op_preset_birthday_year,
-#member_profile_op_preset_birthday_month,
-#member_profile_op_preset_birthday_day {
-	width:120px;
-}
-

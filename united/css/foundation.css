@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+html,body {
+	height:100%;
+}
 
 /*==============================================================================
  * Reset Default Style
@@ -319,7 +322,6 @@ pre {
 }
 
 #Contents {
-background: #FFFFFF;
 }
 
 #ContentsContainer,
@@ -752,6 +754,16 @@ div.dparts {
 
 div.dparts div.parts {
   margin: 0;
+}
+
+.parts {
+	min-height: 20px;
+  padding: 10px;
+  margin-bottom: 20px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid black;
 }
 
 div.ditem {
@@ -1900,10 +1912,10 @@ a.brand {
   margin:0;
 }
 
-div#Body div#Container div#Header div#HeaderContainer div.container div#notificationCenter div#notificationCenterDetail div#notificationCenterDetailHeader,
-div#Body div#Container div#Header div#HeaderContainer div.container div#notificationCenter div#notificationCenterDetail div#notificationCenterLoading,
-div#Body div#Container div#Header div#HeaderContainer div.container div#notificationCenter div#notificationCenterDetail div#notificationCenterLoading,
-div#Body div#Container div#Header div#HeaderContainer div.container div#notificationCenter div#notificationCenterDetail div#notificationCenterError {
+div#notificationCenter div#notificationCenterDetail div#notificationCenterDetailHeader,
+div#notificationCenter div#notificationCenterDetail div#notificationCenterLoading,
+div#notificationCenter div#notificationCenterDetail div#notificationCenterLoading,
+div#notificationCenter div#notificationCenterDetail div#notificationCenterError {
   color: inherit;
 }
 #page_member_login div#LayoutA {

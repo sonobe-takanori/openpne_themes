@@ -29,18 +29,21 @@ ul, ol {
 }
 
 #diaryForm table li,
-#configNotificationMailBox table li {
+#configNotificationMailBox table li,
+#mailForm table li {
 	position:relative;
 	float:left;
 }
 
 #diaryForm table input[type="radio"],
-#configNotificationMailBox table input[type="radio"] {
+#configNotificationMailBox table input[type="radio"],
+#mailForm table input[type="radio"] {
 	float:left;
 	margin-left:5px;
 }
 #diaryForm table input[type="radio"]:first-child,
-#configNotificationMailBox table input[type="radio"]:first-child {
+#configNotificationMailBox table input[type="radio"]:first-child,
+#mailForm table input[type="radio"]:first-child {
 	margin-left:0px;
 }
 
@@ -287,13 +290,19 @@ div#LayoutC {
   overflow: -moz-scrollbars-none;
   padding-top: 0;
   background:transparent;
+  padding-bottom:50px;
+  min-height:800px;
 }
 
 #Left,
 #Center,
-#Top {
+#Top,
+#sideBanner {
   zoom: 1;
   overflow: hidden;
+  background-image: url(../img/smoke.png);
+  background: rgba(255, 255, 255, 0.3);
+  padding:5px;
 }
 
 dd div, dt, ul, ol, td, th, p,
@@ -319,6 +328,7 @@ pre {
  *--------------------------------------------*/
 #Container {
   min-width: 975px;
+  min-height:100%;
 }
 
 #Contents {
@@ -365,7 +375,7 @@ pre {
 
 #LayoutB #Center {
   float: right;
-  width: 630px;
+  width: 625px;
 }
 
 #LayoutB #Bottom {
@@ -390,20 +400,26 @@ pre {
 
 #sideBanner {
   float: right;
-  width: 240px;
-  padding-top: 10px;
+  width: 250px;
 }
 
 div#sideBanner form {
-  margin-bottom: 38px;
+  margin-bottom: 20px;
+  padding-top: 10px;
 }
 
 #Footer {
   clear: both;
   border-top: 1px solid #ccc;
-  padding-top: 10px;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-radius: 0!important;
+  -webkit-border-radius:0!important;
+  -moz-border-radius:0!important;  
+  border: none!important;
 }
-
 /*----------------------------------------------
  * Header
  *--------------------------------------------*/
@@ -749,12 +765,18 @@ div#sideBanner form {
  *--------------------------------------------*/
 div.parts,
 div.dparts {
-  margin: 0 auto 20px;
+  margin: 0 auto 5px;
+}
+
+div.parts:last-child,
+div.dparts:last-child {
+	margin:0 auto 0px;
 }
 
 div.dparts div.parts {
   margin: 0;
 }
+
 
 .parts {
 	min-height: 20px;
@@ -800,7 +822,7 @@ div.partsHeading h3 {
 	display: block;
 	width: 100%;
 	padding: 0;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	border: 0;
 	border-bottom: 1px solid #e5e5e5;
 	font-size:17px;
@@ -903,7 +925,6 @@ div.operation ul.moreInfo li {
 }
 
 #Left .calendar .partsHeading a {
-  color: #FFFFFF;
   text-decoration: none;
 }
 
@@ -1001,27 +1022,30 @@ div.operation ul.moreInfo li {
 }
 
 .informationBox .caution {
-  margin-top:10px;
   color: inherit;
 }
 .informationBox a,
 .informationBox .caution a,
-.informationBox a strong {
+.informationBox a strong,
+.descriptionBox a{
   color: inherit;
   text-decoration: underline;
   font-weight:normal;
+  font-size: inherit;
 }
+
 .informationBox a:hover,
 .informationBox .caution a:hover,
-.informationBox a:hover strong {
+.informationBox a:hover strong,
+.descriptionBox a:hover {
 	font-weight:bold;
 }
 
-div#Top div#information_1 {
+.informationBox {
   border: 1px solid black;	
 }
 
-div#Top div#information_1,
+.informationBox,
 #notificationCenterDetail {
 	padding: 8px 35px 8px 14px;
 	margin-bottom: 20px;
@@ -1362,7 +1386,6 @@ div#Top div#information_1,
   display: block;
   width: 180px;
   padding: 5px;
-  border-right: 1px solid #CCCCCC;
 }
 
 .searchResultList tr.operation span.moreInfo {
@@ -1465,12 +1488,12 @@ div#Top div#information_1,
 
 .homeRecentList ul.articleList li {
   padding-bottom: 5px;
-  padding-left: 85px;
-  text-indent: -72px;
+  padding-left: 68px;
+  text-indent: -68px;
 }
 
 .homeRecentList span.date {
-  padding-right: 18px;
+  padding-right: 7px;
 }
 
 .homeRecentList div.moreInfo ul.moreInfo {
@@ -1623,9 +1646,36 @@ div#Top div#information_1,
   width: 160px;
 }
 
-.loginForm input {
-  border: 1px solid #888888;
-  background-color: #f8f8f8;
+.input_submit,
+input[type="submit"],
+input[type="button"] {
+  display: inline-block;
+  padding: 4px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+  -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+}
+
+.loginForm input:active,
+  input:active {
+  background-image: none;
+  color: #333;
+  background-color: #e6e6e6;
+  outline: 0;
+  -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+  -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
 }
 
 .loginForm .password_query {
@@ -1889,7 +1939,6 @@ div.dparts div.parts,
 #profileForm {
   min-height: 20px;
   padding: 10px;
-  margin-bottom: 20px;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
@@ -1922,6 +1971,12 @@ div#notificationCenter div#notificationCenterDetail div#notificationCenterError 
 	width:980px;
 }
 
+#page_member_login div#Top,
+#page_member_login div#Center {
+	background:none;
+}
+
+
 #page_member_login #MailAddressLogin.loginForm {
 	margin: 140px;
   padding: 60px;
@@ -1937,7 +1992,7 @@ div#notificationCenter div#notificationCenterDetail div#notificationCenterError 
 }
 #page_member_profile .alertBox.dparts table,
 #page_member_profile .alertBox.dparts th,
-#page_member_profile .alertBox. td, {
+#page_member_profile .alertBox. td {
 	border:none;
 	background:transparent;
 	color:inherit;

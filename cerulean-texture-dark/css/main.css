@@ -1,23 +1,31 @@
 @charset "UTF-8";
 
 /*
-Theme Name:united
+Theme Name:cerulean
 Theme URI:
-Description:Bootswatchのunitedに対応させた
+Description:●Bootswatchのceruleanに対応させた(背景画像明るい)
 Author:sonobe
 Version: 1.0.0
 */
 
+
+body {
+  background-image: url(../img/bg.png);
+}
+
+
 div.partsHeading h3 {
 	color:#333;
-  border-bottom: 1px solid #f5f5f5;
+  /*border-bottom: 1px solid #f5f5f5;*/
 }
 
 /*well*/
+.parts,
 .memberImageBox,
 #MailAddressLogin,
 div.dparts div.parts,
-#profileForm {
+#profileForm,
+#Footer {
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
   -webkit-border-radius: 4px;  
@@ -33,10 +41,6 @@ div.dparts div.parts,
   color: #333;
 }
 
-h1.brand > a {
-  color: white;
-}
-
 div#Header div#HeaderContainer div.container div#notificationCenter {
   background-image: url(../img/NOTIFY_CENTER_2.png);
 }
@@ -49,7 +53,7 @@ div.container div#notificationCenter div#notificationCenterDetail,
   color: #eca918;
 }
 
-div#Body div#Container div#Contents div#ContentsContainer div#LayoutA div#Top div#information_1 {
+.informationBox {
   color: #38b44a;
   background-color: #caeecf;
   border-color: #b7e8b6;
@@ -59,6 +63,16 @@ div.alertBox {
 	background-color: #fadfdd;
 	color: #df382c;
 	border-color:#f8d0d4;
+}
+
+
+.input_submit,
+input[type="submit"],
+input[type="button"] {
+  color: #333;
+  background-color: #fff;
+  border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+  border-bottom-color: #b3b3b3;
 }
 
 /*テーブル角丸*/
