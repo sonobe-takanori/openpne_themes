@@ -3,9 +3,17 @@
 	<name>openpne_themes</name>
 	<comment></comment>
 	<projects>
+		<project>[root]dazai2.pne.jp</project>
+		<project>sonobe.dazai2.pne.jp</project>
 	</projects>
 	<buildSpec>
+		<buildCommand>
+			<name>com.aptana.ide.core.unifiedBuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
 	</buildSpec>
 	<natures>
+		<nature>com.aptana.projects.webnature</nature>
 	</natures>
 </projectDescription>

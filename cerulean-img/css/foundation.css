@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 html,body {
-	height:100%;
+  height:100%;
 }
 
 /*==============================================================================
@@ -16,42 +16,32 @@ iframe, object, embed {
   border: none;
   text-align: left;
 }
-
 body {
-	font-size: 14px;
-	line-height: 20px;
-	font-family: "Helvetica Neue", Helvetica, Arial, Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, Verdana, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
-
 ul, ol {
   list-style-position: outside;
   list-style-type: none;
 }
-
 #diaryForm table li,
 #configNotificationMailBox table li,
 #mailForm table li {
-	position:relative;
-	float:left;
+  position:relative;
+  float:left;
 }
-
 #diaryForm table input[type="radio"],
 #configNotificationMailBox table input[type="radio"],
 #mailForm table input[type="radio"] {
-	float:left;
-	margin-left:5px;
+  float:left;
+  margin-left:5px;
 }
 #diaryForm table input[type="radio"]:first-child,
 #configNotificationMailBox table input[type="radio"]:first-child,
 #mailForm table input[type="radio"]:first-child {
-	margin-left:0px;
+  margin-left:0px;
 }
-
-#configNotificationMailBox th {
-	width:300px;
-}
-
-
 table {
   border-collapse: separate;
   border-spacing: 0;
@@ -59,23 +49,21 @@ table {
   margin: 0;
   font-size: 1em;
 }
-
+#configNotificationMailBox th {
+  width:300px;
+}
 * {
   word-break: break-all;
 }
-
 *:first-child+html table {
   border-collapse: collapse;
 }
-
 * html table {
   border-collapse: collapse;
 }
-
 th, td {
   vertical-align: middle;
 }
-
 address, cite, caption, th, del, ins,
 abbr, acronym, dfn, em, strong,
 code, kbd, samp, var {
@@ -86,45 +74,35 @@ code, kbd, samp, var {
   text-align: left;
   text-decoration: none;
 }
-
 img {
   border: none;
   vertical-align: baseline;
 }
-
 a img {
   vertical-align: text-bottom;
 }
-
 * html a img {
   vertical-align: baseline;
 }
-
 br {
   letter-spacing: 0;
 }
-
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
   font-weight: normal;
 }
-
 q:before, q:after {
   content: "";
 }
-
 form, fieldset, input, textarea {
   margin: 0;
 }
-
 form, fieldset {
   padding: 0;
 }
-
 fieldset {
   border: none;
 }
-
 form p {
   margin: 0;
   padding: 0;
@@ -137,49 +115,38 @@ body {
   line-height: 1.2;
   font-style: normal;
 }
-
 input,
 textarea,
 select {
   font-size: inherit;
 }
-
 input[type='text'], input[type='password'], .input_text {
-	margin:0;
+  margin:0;
 }
-
-
 .input_text,
 .input_password,
 textarea {
 }
-
 .input_text,
 .input_password,
 textarea,
 select {
-	margin:0;
+  margin:0;
 }
-
 .input_image {
   border: none;
 }
-
 .input_submit {
   letter-spacing: 0;
 }
-
 .input_file {
   background: none;
 }
-
 strong {
 }
-
 .sortable {
   cursor: move;
 }
-
 /*----------------------------------------------
  * Table
  *--------------------------------------------*/
@@ -190,22 +157,18 @@ div.parts table {
   border-style: solid;
   border-color: #CCCCCC;
 }
-
 div.parts th,
 div.parts td {
   border-width: 0;
   border-style: solid;
   border-color: #e5e5e5;
 }
-
 div.parts table td,div.parts table th {
-	border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
 }
 div.parts table tr:first-child td,div.parts table tr:first-child th {
-	border-top:transparent;
-} 
-
-
+  border-top:transparent;
+}
 div.parts .form table {
   max-width: 100%;
   border-collapse: collapse;
@@ -213,7 +176,6 @@ div.parts .form table {
   width: 100%;
   margin-bottom: 18px;
 }
-
 .form table th, .form table td { 
   padding: 8px; 
   line-height: 18px;
@@ -732,23 +694,15 @@ div#sideBanner form {
   color: #333333;
 }
 
-#localNav ul.friend li a:hover {
-}
 
-#localNav ul.community li a:hover {
-}
 
 /*----------------------------------------------
  * Contents
  *--------------------------------------------*/
-#Contents {
-}
 
 /*----------------------------------------------
  * Footer
  *--------------------------------------------*/
-#Footer {
-}
 
 #Footer a {
   color: #0088cc;
@@ -770,7 +724,7 @@ div.dparts {
 
 div.parts:last-child,
 div.dparts:last-child {
-	margin:0 auto 0px;
+  margin:0 auto 0px;
 }
 
 div.dparts div.parts {
@@ -779,7 +733,7 @@ div.dparts div.parts {
 
 
 .parts {
-	min-height: 20px;
+  min-height: 20px;
   padding: 10px;
   margin-bottom: 20px;
   -webkit-box-shadow: none;
@@ -795,37 +749,17 @@ div.ditem {
 /*----------------------------------------------
  * Parts Heading
  *--------------------------------------------*/
-div.partsHeading {
-}
-
-div.partsHeading a {
-}
-
-#LayoutA #Left div.partsHeading {
-}
-
-#LayoutA #Center div.partsHeading {
-}
-
-#LayoutB #Left div.partsHeading {
-}
-
-#LayoutB #Center div.partsHeading {
-}
-
-#LayoutC #Center div.partsHeading {
-}
 
 div.partsHeading h3 {
   display: inline;
   font-weight: bold;
-	display: block;
-	width: 100%;
-	padding: 0;
-	margin-bottom: 10px;
-	border: 0;
-	border-bottom: 1px solid #e5e5e5;
-	font-size:17px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 10px;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+  font-size:17px;
   line-height: 30px;
 }
 
@@ -1038,21 +972,21 @@ div.operation ul.moreInfo li {
 .informationBox .caution a:hover,
 .informationBox a:hover strong,
 .descriptionBox a:hover {
-	font-weight:bold;
+  font-weight:bold;
 }
 
 .informationBox {
-  border: 1px solid black;	
+  border: 1px solid black;  
 }
 
 .informationBox,
 #notificationCenterDetail {
-	padding: 8px 35px 8px 14px;
-	margin-bottom: 20px;
-	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	border-radius: 0;
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 /*==============================================================================
  * alertBox
@@ -1061,8 +995,8 @@ div.operation ul.moreInfo li {
   width: auto;
 }
 .alertBox.dparts > div.parts {
-	background-color: inherit;
-	color: inherit;
+  background-color: inherit;
+  color: inherit;
 }
 #Body .alertBox th {
   padding: 8px 0;
@@ -1181,15 +1115,15 @@ div.operation ul.moreInfo li {
 }
 
 #profileForm .parts {
-	background:transparent;
-	border:none;
-	-webkit-box-shadow: none;
+  background:transparent;
+  border:none;
+  -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
 #page_member_editProfile table {
-	border-width:0px;
-	margin-top:15px;
+  border-width:0px;
+  margin-top:15px;
 }
 /*==============================================================================
  * YesNo
@@ -1219,9 +1153,6 @@ div.operation ul.moreInfo li {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 */}
 
-.memberImageBox p.photo {
-}
-
 .memberImageBox p.friendLink {
   margin-bottom: 3px;
 }
@@ -1231,7 +1162,7 @@ div.operation ul.moreInfo li {
 }
 
 .memberImageBox ul.moreInfo li {
-	text-align:center;
+  text-align:center;
   padding: 1px 0;
   background: none;
 }
@@ -1331,7 +1262,7 @@ div.operation ul.moreInfo li {
 }
 
 .nineTable td {
-	overflow: visible;
+  overflow: visible;
 }
 
 .nineTable tr.text td {
@@ -1947,7 +1878,7 @@ div.dparts div.parts,
 
 form label {
   float:left;
-	font-size: 15px;
+  font-size: 15px;
 }
 
 form select#language_culture {
@@ -1968,24 +1899,24 @@ div#notificationCenter div#notificationCenterDetail div#notificationCenterError 
   color: inherit;
 }
 #page_member_login div#LayoutA {
-	width:980px;
+  width:980px;
 }
 
 #page_member_login div#Top,
 #page_member_login div#Center {
-	background:none;
+  background:none;
 }
 
 
 #page_member_login #MailAddressLogin.loginForm {
-	margin: 140px;
+  margin: 140px;
   padding: 60px;
 }
 #page_member_login #sideBanner {
-	display:none;
+  display:none;
 }
 #page_member_login.insecure_page div#LayoutA div#Center {
-	float: left;
+  float: left;
   width: 30%;
   margin-left: 40%;
   margin-top: 10%;
@@ -1993,17 +1924,17 @@ div#notificationCenter div#notificationCenterDetail div#notificationCenterError 
 #page_member_profile .alertBox.dparts table,
 #page_member_profile .alertBox.dparts th,
 #page_member_profile .alertBox. td {
-	border:none;
-	background:transparent;
-	color:inherit;
+  border:none;
+  background:transparent;
+  color:inherit;
 }
 .alertBox div.parts table {
-	border:none !important;
+  border:none !important;
 }
 .navbar-inner {
-	border-radius:0;
-	-moz-border-radius: 0;
-	-webkit-border-radius: 0;
+  border-radius:0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
 }
 
 .navbar .brand {
@@ -2016,6 +1947,6 @@ div#notificationCenter div#notificationCenterDetail div#notificationCenterError 
 #member_profile_op_preset_birthday_year,
 #member_profile_op_preset_birthday_month,
 #member_profile_op_preset_birthday_day {
-	width:120px;
+  width:120px;
 }
 
