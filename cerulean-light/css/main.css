@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 /*
-Theme Name:cerulean
+Theme Name:cerulean-light
 Theme URI:
-Description:Bootswatchのcerulean(背景画像付)
+Description:Bootswatchのcerulean(背景画像明るい)
 Author:sonobe
 Version: 1.0.0
 */
@@ -11,12 +11,8 @@ Version: 1.0.0
 /*==============================================================================
  * Common
  *----------------------------------------------------------------------------*/
-#Body {
-  z-index: -100;
-  background-image: url(../img/bg.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
+body {
+  background-image: url(../img/bg.png);
 }
 /*well*/
 .parts,
