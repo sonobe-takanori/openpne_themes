@@ -78,6 +78,12 @@ input[type="button"] {
   border-bottom-color: #b3b3b3;
 }
 
+.input_submit:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background-color: #e6e6e6;
+}
+
 /*テーブル角丸*/
 div.parts table {
   border-radius: 4px;
